@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyBuddy Mini – A Rule-Based Learning Companion</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <!-- Google Fonts: Space Grotesk (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Brand -->
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">
+          <span class="icon-book">📖</span>
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-name">StudyBuddy <span class="brand-mini">Mini</span></h1>
+          <p class="brand-tagline">A Rule-Based Learning Companion</p>
+        </div>
+      </div>
+
+      <!-- Status badge -->
+      <div class="status-badge" aria-label="Chatbot is online">
+        <span class="status-dot"></span>
+        <span class="status-label">Online</span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════ -->
+  <main class="main-wrapper">
+
+    <!-- Chat Card -->
+    <div class="chat-card" role="region" aria-label="Chat window">
+
+      <!-- ── Chat Messages ────────────────────────────── -->
+      <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Conversation history">
+        <!-- Welcome message injected by JS on page load -->
+      </div>
+
+      <!-- ── Typing Indicator ──────────────────────────── -->
+      <div class="typing-indicator" id="typingIndicator" aria-hidden="true" hidden>
+        <div class="typing-avatar">SB</div>
+        <div class="typing-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="typing-label">StudyBuddy is thinking…</span>
+      </div>
+
+      <!-- ── Suggestion Chips ──────────────────────────── -->
+      <div class="suggestions" id="suggestions" aria-label="Quick topics">
+        <button class="chip" data-message="python"     aria-label="Ask about Python">Python</button>
+        <button class="chip" data-message="study tips" aria-label="Ask for study tips">Study Tips</button>
+        <button class="chip" data-message="ai"         aria-label="Ask about AI">AI</button>
+        <button class="chip" data-message="dsa"        aria-label="Ask about DSA">DSA</button>
+        <button class="chip" data-message="motivation" aria-label="Ask for motivation">Motivation</button>
+        <button class="chip" data-message="joke"       aria-label="Tell me a joke">Joke</button>
+      </div>
+
+      <!-- ── Input Area ────────────────────────────────── -->
+      <div class="input-area">
+        <input
+          type="text"
+          id="userInput"
+          class="chat-input"
+          placeholder="Ask me anything… (try 'help' to start)"
+          autocomplete="off"
+          aria-label="Type your message"
+          maxlength="200"
+        />
+        <button class="send-btn" id="sendBtn" aria-label="Send message" title="Send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+
+      <!-- ── Footer Controls ───────────────────────────── -->
+      <div class="chat-footer">
+        <span class="footer-note">No AI · No APIs · Pure Python Logic</span>
+        <button class="clear-btn" id="clearBtn" aria-label="Clear chat history" title="Clear chat">
+          Clear Chat
+        </button>
+      </div>
+
+    </div>
+    <!-- / chat-card -->
+
+    <!-- Built-by credit -->
+    <p class="credit">
+      Built by <strong>Shivansh Pathak</strong> · DecodeLabs AI Internship · Project 1
+    </p>
+
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
